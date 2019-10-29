@@ -25,7 +25,9 @@ func setVDestToStdout(_ location.L, _ *param.ByName, _ []string) error {
 
 // AddParams will add the params to the given param set which control the
 // behaviour of the Verbose function. This should be called before the
-// ParamSet is parsed
+// ParamSet is parsed. All the parameters are marked as hidden
+// (DontShowInStdUsage) so they will not appear in the default help message
+// but will be visible if all parameters are shown.
 func AddParams(ps *param.PSet) error {
 	const paramGroupName = "pkg.verbose"
 	ps.AddGroup(paramGroupName,
@@ -34,11 +36,13 @@ func AddParams(ps *param.PSet) error {
 	ps.Add("verbose", psetter.Bool{Value: &verbose},
 		"set this parameter to get the verbose behaviour"+
 			" - extra messages will be printed.",
+		param.Attrs(param.DontShowInStdUsage),
 		param.GroupName(paramGroupName))
 
 	ps.Add("verbose-to-stderr", psetter.Nil{},
 		"set this parameter to have messages printed to the"+
 			" standard error rather than standard out.",
+		param.Attrs(param.DontShowInStdUsage),
 		param.GroupName(paramGroupName),
 		param.PostAction(setVDestToStderr))
 
@@ -47,6 +51,7 @@ func AddParams(ps *param.PSet) error {
 			" standard output. This is the standard behaviour and"+
 			" should only be needed if the destination has"+
 			" already been changed, perhaps in a configuration file.",
+		param.Attrs(param.DontShowInStdUsage),
 		param.GroupName(paramGroupName),
 		param.PostAction(setVDestToStdout))
 
