@@ -4,8 +4,8 @@ import (
 	"os"
 
 	"github.com/nickwells/location.mod/location"
-	"github.com/nickwells/param.mod/v3/param"
-	"github.com/nickwells/param.mod/v3/param/psetter"
+	"github.com/nickwells/param.mod/v4/param"
+	"github.com/nickwells/param.mod/v4/param/psetter"
 )
 
 var verbose bool
