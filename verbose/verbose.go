@@ -34,6 +34,10 @@ func Print(messages ...string) {
 // Println prints the messages using the Print function but with an added
 // newline at the end
 func Println(messages ...string) {
+	if !verbose {
+		return
+	}
+
 	Print(messages...)
 	Print("\n")
 }
