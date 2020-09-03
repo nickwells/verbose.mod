@@ -3,6 +3,6 @@ module github.com/nickwells/verbose.mod
 go 1.12
 
 require (
-	github.com/nickwells/location.mod v1.2.7
-	github.com/nickwells/param.mod/v5 v5.0.6
+	github.com/nickwells/location.mod v1.2.10
+	github.com/nickwells/param.mod/v5 v5.1.1
 )
