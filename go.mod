@@ -4,5 +4,5 @@ go 1.12
 
 require (
 	github.com/nickwells/location.mod v1.2.10
-	github.com/nickwells/param.mod/v5 v5.1.1
+	github.com/nickwells/param.mod/v5 v5.2.0
 )
