@@ -9,6 +9,7 @@ import (
 )
 
 var verbose bool
+
 var vDest = os.Stdout
 
 // setVDestToStderr
