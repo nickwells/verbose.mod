@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/nickwells/location.mod v1.2.26
-	github.com/nickwells/param.mod/v5 v5.18.0
+	github.com/nickwells/param.mod/v5 v5.19.0
 )
 
 require github.com/nickwells/tempus.mod v1.0.2 // indirect
