@@ -42,6 +42,15 @@ func Println(messages ...string) {
 	Print("\n")
 }
 
+// Printf prints the messages
+func Printf(format string, a ...any) {
+	if !verbose {
+		return
+	}
+
+	fmt.Fprintf(vDest, format, a...)
+}
+
 // IsOn returns true if the verbose flag has been set false otherwise
 func IsOn() bool {
 	return verbose
