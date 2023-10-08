@@ -17,11 +17,12 @@ type Stack struct {
 	stack       []string
 }
 
-// Start prints the Start message, starts a timer and returns the function
-// to be called at the end.
+// Start prints the Start message, starts a timer and returns the function to
+// be called at the end. The tag is the name of the function or code section
+// that is being timed, the msg will only be printed in verbose mode.
 func (s *Stack) Start(tag, msg string) func() {
 	s.stack = append(s.stack, tag)
-	if IsOn() { // we're in verbose mode
+	if verbose {
 		fmt.Println(s.Tag(), msg)
 	} else if s.ShowTimings {
 		fmt.Println(s.Tag(), "Start")
@@ -58,11 +59,10 @@ func (s *Stack) popStack() {
 // Act satisfies the action function interface for a timer. It prints out the
 // tag and the duration in milliseconds if the program is in verbose mode
 func (s *Stack) Act(_ string, d time.Duration) {
-	tag := s.Tag()
 	s.popStack()
 
-	if IsOn() || s.ShowTimings {
+	if verbose || s.ShowTimings {
 		fmt.Printf("%s%12.3f msecs\n",
-			tag, float64(d/time.Microsecond)/1000.0)
+			s.Tag(), float64(d/time.Microsecond)/1000.0)
 	}
 }
