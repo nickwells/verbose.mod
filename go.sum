@@ -24,6 +24,8 @@ github.com/nickwells/tempus.mod v1.1.0 h1:Xi0diwaBax1zKggNGMxbv65WJoMOQE7uK/Ncby
 github.com/nickwells/tempus.mod v1.1.0/go.mod h1:k6QfE9lG7ZzsQMn5rY1eaBEljPuBwoysvxSaUqlhzYQ=
 github.com/nickwells/testhelper.mod/v2 v2.3.0 h1:b/EpnHiYr8dnr6C0a6zW2KAyHgfQ72pVw3cNklSzwxs=
 github.com/nickwells/testhelper.mod/v2 v2.3.0/go.mod h1:pdhf+XHRINEUH6a0OcwC98ETD3ZluAXKA5xOhC2I2Qk=
+github.com/nickwells/timer.mod v1.2.3 h1:3FbjrdKmgzoUWSjhvajgkUEWrC364iuvkd+OXLR7oho=
+github.com/nickwells/timer.mod v1.2.3/go.mod h1:se+56AyN3i8W2ME7JFi5G8D86On6U6AOjX9TTyuTlNE=
 github.com/nickwells/twrap.mod v1.5.4 h1:RX+zbL3+oe9zLUKLEkVkk2E2m6B7HEvJNyU2PDOPkN0=
 github.com/nickwells/twrap.mod v1.5.4/go.mod h1:zUdD2gq6DnMiLn1uWuJWUpiOCuQvlxS1p5yJGxdp7uk=
 github.com/nickwells/xdg.mod v1.0.9 h1:IQhytP6QBCC2xrSVXTE0GDbYJSD8E25H6sSqd7jtCHA=

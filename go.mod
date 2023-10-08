@@ -7,6 +7,7 @@ toolchain go1.21.0
 require (
 	github.com/nickwells/location.mod v1.2.27
 	github.com/nickwells/param.mod/v6 v6.1.1
+	github.com/nickwells/timer.mod v1.2.3
 )
 
 require github.com/nickwells/tempus.mod v1.1.0 // indirect
