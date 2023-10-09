@@ -7,7 +7,9 @@ toolchain go1.21.0
 require (
 	github.com/nickwells/location.mod v1.2.27
 	github.com/nickwells/param.mod/v6 v6.1.3
+	github.com/nickwells/testhelper.mod/v2 v2.3.0
 	github.com/nickwells/timer.mod v1.2.3
+	golang.org/x/exp v0.0.0-20231006140011-7918f672742d
 )
 
 require github.com/nickwells/tempus.mod v1.1.0 // indirect
@@ -22,7 +24,6 @@ require (
 	github.com/nickwells/pager.mod v1.0.11 // indirect
 	github.com/nickwells/strdist.mod v1.1.13 // indirect
 	github.com/nickwells/twrap.mod v1.5.4 // indirect
-	golang.org/x/exp v0.0.0-20231006140011-7918f672742d // indirect
 	golang.org/x/sys v0.13.0 // indirect
 	golang.org/x/term v0.13.0 // indirect
 )

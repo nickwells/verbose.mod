@@ -23,9 +23,9 @@ type Stack struct {
 func (s *Stack) Start(tag, msg string) func() {
 	s.stack = append(s.stack, tag)
 	if verbose {
-		fmt.Println(s.Tag(), msg)
+		fmt.Fprintln(vDest, s.Tag(), msg)
 	} else if s.ShowTimings {
-		fmt.Println(s.Tag(), "Start")
+		fmt.Fprintln(vDest, s.Tag(), "Start")
 	} else {
 		return func() { s.popStack() }
 	}
@@ -59,10 +59,9 @@ func (s *Stack) popStack() {
 // Act satisfies the action function interface for a timer. It prints out the
 // tag and the duration in milliseconds if the program is in verbose mode
 func (s *Stack) Act(_ string, d time.Duration) {
-	s.popStack()
-
 	if verbose || s.ShowTimings {
-		fmt.Printf("%s%12.3f msecs\n",
+		fmt.Fprintf(vDest, "%s%12.3f msecs\n",
 			s.Tag(), float64(d/time.Microsecond)/1000.0)
 	}
+	s.popStack()
 }

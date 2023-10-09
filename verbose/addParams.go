@@ -1,6 +1,7 @@
 package verbose
 
 import (
+	"io"
 	"os"
 
 	"github.com/nickwells/location.mod/location"
@@ -20,7 +21,7 @@ const (
 
 var verbose bool
 
-var vDest = os.Stdout
+var vDest io.Writer = os.Stdout
 
 // setVDestToStderr
 func setVDestToStderr(_ location.L, _ *param.ByName, _ []string) error {
