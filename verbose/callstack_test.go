@@ -29,18 +29,23 @@ func TestStack(t *testing.T) {
 	}
 
 	defer func() { vDest = os.Stdin }()
+
 	for _, tc := range testCases {
 		stack := &Stack{ShowTimings: true}
 		buf := new(bytes.Buffer)
 		vDest = buf
 		funcStack := []func(){}
+
 		for _, tag := range tc.tags {
 			funcStack = append(funcStack, stack.Start(tag, "msg"))
 		}
+
 		slices.Reverse[[]func(), func()](funcStack)
+
 		for _, f := range funcStack {
 			f()
 		}
+
 		if !tc.expTagRE.MatchString(buf.String()) {
 			t.Logf("%s\n", tc.IDStr())
 			t.Errorf("\t: bad output: %q", buf.String())

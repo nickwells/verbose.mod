@@ -39,12 +39,16 @@ func (s *Stack) Tag() string {
 	if len(s.stack) == 0 {
 		return "[empty]"
 	}
+
 	t := strings.Repeat("|    ", len(s.stack)-1) +
 		s.stack[len(s.stack)-1]
+
 	if len(t) < maxStackWidth {
 		t += strings.Repeat(".", maxStackWidth-len(t))
 	}
+
 	t += ":"
+
 	return t
 }
 
@@ -53,6 +57,7 @@ func (s *Stack) popStack() {
 	if len(s.stack) == 0 {
 		return
 	}
+
 	s.stack = s.stack[:len(s.stack)-1]
 }
 
@@ -61,7 +66,8 @@ func (s *Stack) popStack() {
 func (s *Stack) Act(_ string, d time.Duration) {
 	if verbose || s.ShowTimings {
 		fmt.Fprintf(vDest, "%s%12.3f msecs\n",
-			s.Tag(), float64(d/time.Microsecond)/1000.0)
+			s.Tag(), float64(d/time.Millisecond))
 	}
+
 	s.popStack()
 }
