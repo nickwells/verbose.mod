@@ -1,8 +1,6 @@
 module github.com/nickwells/verbose.mod
 
-go 1.21
-
-toolchain go1.21.0
+go 1.24
 
 require (
 	github.com/nickwells/location.mod v1.2.27
