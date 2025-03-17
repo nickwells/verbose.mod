@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"os"
 	"regexp"
+	"slices"
 	"testing"
 
 	"github.com/nickwells/testhelper.mod/v2/testhelper"
-	"golang.org/x/exp/slices"
 )
 
 func TestStack(t *testing.T) {
@@ -40,7 +40,7 @@ func TestStack(t *testing.T) {
 			funcStack = append(funcStack, stack.Start(tag, "msg"))
 		}
 
-		slices.Reverse[[]func(), func()](funcStack)
+		slices.Reverse(funcStack)
 
 		for _, f := range funcStack {
 			f()
