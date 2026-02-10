@@ -24,13 +24,13 @@ var verbose bool
 var vDest io.Writer = os.Stdout
 
 // setVDestToStderr
-func setVDestToStderr(_ location.L, _ *param.ByName, _ []string) error {
+func setVDestToStderr(_ location.L, _ *param.BaseParam, _ []string) error {
 	vDest = os.Stderr
 	return nil
 }
 
 // setVDestToStdout
-func setVDestToStdout(_ location.L, _ *param.ByName, _ []string) error {
+func setVDestToStdout(_ location.L, _ *param.BaseParam, _ []string) error {
 	vDest = os.Stdout
 	return nil
 }
