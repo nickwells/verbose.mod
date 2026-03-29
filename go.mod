@@ -4,7 +4,7 @@ go 1.26.0
 
 require (
 	github.com/nickwells/location.mod v1.2.35
-	github.com/nickwells/param.mod/v7 v7.1.0
+	github.com/nickwells/param.mod/v7 v7.1.2
 	github.com/nickwells/testhelper.mod/v2 v2.5.0
 	github.com/nickwells/timer.mod v1.2.7
 )
